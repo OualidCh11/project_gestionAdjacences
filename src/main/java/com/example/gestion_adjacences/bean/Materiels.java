@@ -22,9 +22,11 @@ public class Materiels {
     private String serial_number;
 
     @ManyToOne
+    @JoinColumn(name = "employes_id")
     private Employes employes;
 
     @ManyToOne
+    @JoinColumn(name ="id_société_maintenance")
     private Société_Maintenance société_maintenance;
 
 }

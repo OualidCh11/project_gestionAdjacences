@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import java.util.Collection;
 import java.util.Date;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -27,10 +28,12 @@ public class Employes {
     private String numero_bureau ;
 
     @OneToMany(mappedBy = "employes")
-    private Collection<Materiels> materiels;
+    private List<Materiels> materiels;
+
 
     @OneToMany(mappedBy = "employes")
-    private Collection<Problem> problem;
+    private List<Problem> problems;
+
 
 
 }

@@ -6,9 +6,11 @@ import com.example.gestion_adjacences.bean.Employes;
 import com.example.gestion_adjacences.bean.Materiels;
 import com.example.gestion_adjacences.services.facade.MaterielsServices;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class MaterielsImpl implements MaterielsServices {
 
     @Autowired

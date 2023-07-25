@@ -4,9 +4,11 @@ import com.example.gestion_adjacences.Dao.EmployesDao;
 import com.example.gestion_adjacences.bean.Employes;
 import com.example.gestion_adjacences.services.facade.EmployesServices;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class EmployesImpl implements EmployesServices {
 
     @Autowired

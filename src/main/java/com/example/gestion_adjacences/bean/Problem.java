@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -16,7 +18,7 @@ public class Problem {
     private long id;
     private String name_problem;
 
-    @ManyToOne
-    private Employes employes;
-
+  @ManyToOne
+  @JoinColumn(name = "employes_id")
+  private Employes employes;
 }

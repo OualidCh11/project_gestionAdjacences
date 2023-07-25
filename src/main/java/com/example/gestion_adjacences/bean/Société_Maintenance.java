@@ -20,7 +20,7 @@ public class Société_Maintenance {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String name_soviete;
+    private String name_societe;
     private String email;
     private String number_phone;
 
