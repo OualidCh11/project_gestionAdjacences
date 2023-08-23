@@ -7,5 +7,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ProblemDao extends JpaRepository<Problem ,Long> {
 
-    Problem findByName_problem(String name_problem);
+    Problem findByproblemName(String problemName);
 }

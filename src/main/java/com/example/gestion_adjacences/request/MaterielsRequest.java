@@ -14,6 +14,6 @@ public class MaterielsRequest implements Serializable {
 
     private long id;
     private String type;
-    private String serial_number;
+    private String serialNumber;
 
 }

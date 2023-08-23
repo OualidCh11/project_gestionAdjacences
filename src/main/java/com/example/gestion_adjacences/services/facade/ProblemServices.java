@@ -11,5 +11,5 @@ public interface ProblemServices {
 
     List<Problem> GetAll();
 
-    void Delete(String name_problem);
+    void Delete(String problemName);
 }

@@ -10,7 +10,7 @@ public interface MaterielsServices {
 
     List<Materiels> GetAll();
 
-    Materiels UpdateMateriels(String serial_number,Materiels materiels);
+    Materiels UpdateMateriels(String serialNumber,Materiels materiels);
 
-    void Delete(String serial_number);
+    void Delete(String serialNumber);
 }

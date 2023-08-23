@@ -12,6 +12,6 @@ import java.io.Serializable;
 public class ProblemRequest implements Serializable {
 
     private long id;
-    private String name_problem;
+    private String problemName;
 
 }

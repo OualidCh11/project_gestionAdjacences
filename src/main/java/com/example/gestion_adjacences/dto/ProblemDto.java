@@ -10,6 +10,6 @@ import lombok.NoArgsConstructor;
 public class ProblemDto {
 
     private long id;
-    private String name_problem;
+    private String problemName;
 
 }

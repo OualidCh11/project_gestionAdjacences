@@ -8,8 +8,8 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface MaterielsDao extends JpaRepository<Materiels , Long> {
+public interface MaterielsDao extends JpaRepository<Materiels,Long> {
 
-    Materiels findBySerial_number(String serial_number);
+    Materiels findByserialNumber(String serialNumber);
     List<Materiels> findById(Employes employes);
 }

@@ -31,12 +31,12 @@ public class ModelMapperConfig {
 
         // Add mappings for Materiels and MaterielsDto
         modelMapper.createTypeMap(Materiels.class, MaterielsDto.class)
-                .addMapping(Materiels::getSerial_number, MaterielsDto::setSerial_number);
+                .addMapping(Materiels::getSerialNumber, MaterielsDto::setSerialNumber);
 
 
         // Add mappings for Problem and ProblemDto
         modelMapper.createTypeMap(Problem.class, ProblemDto.class)
-                .addMapping(Problem::getName_problem, ProblemDto::setName_problem);
+                .addMapping(Problem::getProblemName, ProblemDto::setProblemName);
 
 
         // Add mappings for Société_Maintenance and Société_MaintenanceDto

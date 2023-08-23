@@ -16,7 +16,7 @@ public class Problem {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    private String name_problem;
+    private String problemName;
 
   @ManyToOne
   @JoinColumn(name = "employes_id")

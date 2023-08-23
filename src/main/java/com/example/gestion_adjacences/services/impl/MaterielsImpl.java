@@ -36,11 +36,11 @@ public class MaterielsImpl implements MaterielsServices {
     @Override
     public Materiels UpdateMateriels(String seriel_number, Materiels materiels) {
 
-        Materiels Materielscheck=materielsDao.findBySerial_number(seriel_number);
+        Materiels Materielscheck=materielsDao.findByserialNumber(seriel_number);
 
         if(Materielscheck==null)throw new RuntimeException("not found");
 
-        Materielscheck.setSerial_number(materiels.getSerial_number());
+        Materielscheck.setSerialNumber(materiels.getSerialNumber());
         Materielscheck.setType(materiels.getType());
 
 
@@ -51,7 +51,7 @@ public class MaterielsImpl implements MaterielsServices {
     @Override
     public void Delete(String seriel_number) {
 
-        Materiels Materielscheck=materielsDao.findBySerial_number(seriel_number);
+        Materiels Materielscheck=materielsDao.findByserialNumber(seriel_number);
         if(Materielscheck==null)throw new RuntimeException("not found");
 
         materielsDao.delete(Materielscheck);

@@ -3,6 +3,7 @@ package com.example.gestion_adjacences.ws;
 import com.example.gestion_adjacences.bean.Employes;
 import com.example.gestion_adjacences.services.facade.EmployesServices;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -40,6 +41,17 @@ public class EmployesWs {
 
         employesServices.Delete(id);
 
+    }
+
+    @GetMapping("/employes")
+    public ResponseEntity<List<Employes>> getAllEmployes() {
+        List<Employes> employesList = employesServices.GetAll(); // Replace with the actual method call from your service
+
+        if (employesList.isEmpty()) {
+            return ResponseEntity.noContent().build();
+        } else {
+            return ResponseEntity.ok(employesList);
+        }
     }
 
 }

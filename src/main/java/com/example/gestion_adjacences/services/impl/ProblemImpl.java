@@ -26,9 +26,9 @@ public class ProblemImpl implements ProblemServices{
     }
 
     @Override
-    public void Delete(String name_problem) {
+    public void Delete(String problemName) {
 
-        Problem problemcheck=problemDao.findByName_problem(name_problem);
+        Problem problemcheck=problemDao.findByproblemName(problemName);
         if(problemcheck==null)throw new RuntimeException("Not found");
 
         problemDao.delete(problemcheck);

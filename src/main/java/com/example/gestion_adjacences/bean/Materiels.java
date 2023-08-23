@@ -19,7 +19,7 @@ public class Materiels {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private String type;
-    private String serial_number;
+    private String serialNumber;
 
     @ManyToOne
     @JoinColumn(name = "employes_id")

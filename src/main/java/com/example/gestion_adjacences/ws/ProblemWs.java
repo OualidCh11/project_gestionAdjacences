@@ -3,6 +3,7 @@ package com.example.gestion_adjacences.ws;
 import com.example.gestion_adjacences.bean.Problem;
 import com.example.gestion_adjacences.services.facade.ProblemServices;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -31,11 +32,22 @@ public class ProblemWs {
 
     }
 
+    @GetMapping("/problems")
+    public ResponseEntity<List<Problem>> getAllProblems() {
+        List<Problem> problemList = problemServices.GetAll(); // Replace with the actual method call from your service
+
+        if (problemList.isEmpty()) {
+            return ResponseEntity.noContent().build();
+        } else {
+            return ResponseEntity.ok(problemList);
+        }
+    }
+
 
     @DeleteMapping
-    void DeleteProblem (@PathVariable String name_Problem){
+    void DeleteProblem (@PathVariable String problemName){
 
-        problemServices.Delete(name_Problem);
+        problemServices.Delete(problemName);
 
     }
 

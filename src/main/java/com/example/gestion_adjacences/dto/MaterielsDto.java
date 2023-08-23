@@ -11,6 +11,6 @@ public class MaterielsDto {
 
     private long id;
     private String type;
-    private String serial_number;
+    private String serialNumber;
 
 }
